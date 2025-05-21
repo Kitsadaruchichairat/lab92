@@ -1,0 +1,70 @@
+1. บรรทัดที่ 4 และ 5 ท าหน้าที่อะไร
+	บรรทัดที่ 4 และ 5 ท าหน้าที่อะไร
+บรรทัดที่ 4 ประกาศตัวแปร name ชนิด String
+บรรทัดที่ 5 สร้าง ออบเจ็กต์  ของคลาส JFrame ชื่อ myWindow
+
+2. บรรทัดที่ 6 ถ้าเปลี่ยนตัวเลขเป็น 500, 400 จะมีผลอย่างไร
+	หน้าต่างจะมีขนาดใหญ่ขึ้น โดยกว้าง 500 พิกเซล และสูง 400 พิกเซล
+
+3. ถ้าต้องการเปลี่ยนหัวเรื่องของหน้าจอที่ปรากฏขณะรันโปรแกรม ต้องเปลี่ยนที่ใด
+	เปลี่ยนข้อความใน setTitle
+
+4. บรรทัดที่ 8 ถ้าเปลี่ยน true เป็น false จะมีผลอย่างไร
+	หากเปลี่ยนเป็น false หน้าต่างจะ ไม่ปรากฏ บนหน้าจอ
+
+5. หน้าจอที่ปรากฎค าถาม What is your name? เกิดจากการท างานของค าสั่งใด
+ 	name = JOptionPane.showInputDialog(myWindow, "What is your name?");
+
+6. ค่าที่ผู้ใช้กรอกลงไปในช่องค าถาม What is your name? จะเก็บใส่ในตัวแปรอะไร
+	name
+
+7. ถ้าต้องการให้หน้าจอของผลลัพธ์สุดท้ายคือ Hello, your name ซ้อนทับในหน้าต่างค าถาม What is your
+name? ไม่ขึ้นหน้าต่างใหม่ ต้องแก้ไขโปรแกรมอย่างไร
+	เปลี่ยนจากnullเป็นmyWindow
+
+8. ถ้าต้องการให้ผลลัพธ์สุดท้ายเปลี่ยนจาก “Hello, your name” เป็น “Your name, Good bye” ต้องแก้ไข
+โปรแกรมอย่างไร
+			 เปลี่ยนOptionPane.showMessageDialog(null, name + ",Good bye");
+
+ข้อ2
+ String gpax;
+		 JFrame myWindow = new JFrame();
+		 
+		 myWindow.setSize(500,400);
+		 myWindow.setTitle("Calculation");
+		 myWindow.setVisible(true);
+		 
+		 gpax= JOptionPane.showInputDialog(myWindow, "What is your GPAX?");
+		 JOptionPane.showMessageDialog(myWindow, "Your GPAX is " + gpax);
+		 JOptionPane.showMessageDialog(null, "You are excellent!!");
+
+ข้อ3
+package basic;
+import javax.swing.*;
+public class Command3 {
+
+
+		public static void main(String[] args) {
+			 String name;
+			 String age;
+			 String occupation;
+			 String skill;
+			 JFrame myWindow = new JFrame();
+			 
+			 myWindow.setSize(500,400);
+			 myWindow.setVisible(true);
+			 
+			 name= JOptionPane.showInputDialog(myWindow, "What is your name?");
+			 age= JOptionPane.showInputDialog(myWindow, "How old are you?");
+			 occupation= JOptionPane.showInputDialog(myWindow, "What is your occupation?");
+			 skill= JOptionPane.showInputDialog(myWindow, "What is your special skill?");
+			 
+			 String message = "Name: "+ name + "\n"
+					 + "Age: " + age +"\n"
+					 + "Occupation: " + occupation +"\n"
+					 + "Special skill: " + skill ;
+			 JOptionPane.showMessageDialog(myWindow,message );
+		 }
+	}
+
+
